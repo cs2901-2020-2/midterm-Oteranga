@@ -20,6 +20,11 @@ public class Subject{
         values.add(value);
     }
 
+    public int getSize(){
+        return values.size();
+    }
+
+
     public static void main(String[] args) {
 
         double[] vals = {
@@ -48,7 +53,7 @@ public class Subject{
         
         var dataset = new HistogramDataset();
         dataset.addSeries("key", vals, 50);
-        
+
         JFreeChart histogram = ChartFactory.createHistogram("Normal distribution",
                 "y values", "x values", dataset);
         }
